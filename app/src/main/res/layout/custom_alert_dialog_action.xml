@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:paddingTop="23dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="@drawable/custom_alert_dialog_bg"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            tools:text="Неверный email"
+    />
+
+    <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            tools:text="Пожалуйста, проверьте свой email"
+    />
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/coral"
+                android:textSize="17sp"
+                android:background="@drawable/custom_alert_dialog_btn_bg1"
+                tools:text="Oткрыть"
+                android:layout_height="48dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightGray"/>
+
+        <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#4a4a4a"
+                android:textSize="17sp"
+                android:background="@drawable/custom_alert_dialog_btn_bg2"
+                tools:text="Отмена"
+                android:layout_height="48dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

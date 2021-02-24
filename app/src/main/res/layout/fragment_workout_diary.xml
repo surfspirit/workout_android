@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.workout_diary.WorkoutDiaryFragment">
+
+    <ru.workout24.ui.workout_diary.view.LockableNestedScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_header"
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/workdiary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_header"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/subscription_dark_gradient" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="77dp"
+                android:fontFamily="@font/roboto_black"
+                android:textAllCaps="true"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Январь 2019" />
+
+            <ru.workout24.ui.workout_diary.view.CalendarSelectableView
+                android:id="@+id/calendarSelectable"
+                android:layout_above="@id/calendar"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Подложка для календаря -->
+            <ru.workout24.ui.workout_diary.view.CalendarBackgroundView
+                android:layout_alignTop="@id/calendar"
+                android:layout_alignBottom="@id/calendar"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ru.workout24.ui.workout_diary.view.NoClickableCalendar
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_header"
+                android:paddingTop="20dp"
+                android:paddingBottom="46dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_workout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/calendar"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        </RelativeLayout>
+
+    </ru.workout24.ui.workout_diary.view.LockableNestedScrollView>
+
+    <ru.workout24.utills.custom_views.CustomToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

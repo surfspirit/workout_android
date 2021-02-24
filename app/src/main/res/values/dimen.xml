@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="filter_bottom_margin">4dp</dimen>
+    <dimen name="divider_left_margin">16dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="calendar_bottom_rect_height">3dp</dimen>
+    <dimen name="article_list_divider_height">4dp</dimen>
+    <dimen name="progress_line_height">12dp</dimen>
+    <dimen name="options_dialog_width">280dp</dimen>
+    <dimen name="options_dialog_height">95dp</dimen>
+    <dimen name="options_dialog_button_height">47dp</dimen>
+    <dimen name="options_dialog_button_width">270dp</dimen>
+    <dimen name="options_dialog_button_corner_radius">5dp</dimen>
+    <dimen name="options_dialog_triangle_width">10dp</dimen>
+    <dimen name="options_dialog_triangle_height">20dp</dimen>
+    <dimen name="profile_margin_top">15dp</dimen>
+    <dimen name="profile_switch_margin_top">7dp</dimen>
+    <dimen name="profile_margin_bottom">13dp</dimen>
+    <dimen name="profile_margin_end">14dp</dimen>
+    <dimen name="profile_white_space_height">32dp</dimen>
+    <dimen name="profile_arrow_height">16dp</dimen>
+    <dimen name="toolbarPaddingTop">35dp</dimen>
+    <dimen name="toolbarHeight">80dp</dimen>
+    <dimen name="toolbarTitleHeight">23dp</dimen>
+</resources>

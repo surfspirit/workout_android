@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.wg_bonuses_detail.WgBonusesDetailFragment">
+
+    <ru.workout24.utills.custom_views.CustomToolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:title="@string/wg_bonuses" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bonuses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_apply"
+        android:layout_below="@id/appBar"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <ru.workout24.utills.custom_views.CustomButton
+        android:id="@+id/btn_apply"
+        android:layout_alignParentBottom="true"
+        style="@style/OrangeRoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="18sp"
+        app:isRounded="true"
+        app:textBtn="Новые возможности" />
+
+</RelativeLayout>

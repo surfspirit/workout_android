@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helpful_info_layer"
+    app:startDestination="@id/helpfulinfo">
+
+    <fragment
+        android:id="@+id/helpfulinfo"
+        android:name="ru.workout24.ui.helpful_info.HelpfulInfoFragment"
+        tools:layout="@layout/fragment_helpful_info">
+        <action
+            android:id="@+id/action_helpfulinfo_to_article"
+            app:destination="@id/article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/article"
+        android:name="ru.workout24.ui.article.ArticleFragment"
+        tools:layout="@layout/fragment_article"/>
+    <action
+        android:id="@+id/action_global_test_layer3"
+        app:destination="@id/test_layer" />
+</navigation>

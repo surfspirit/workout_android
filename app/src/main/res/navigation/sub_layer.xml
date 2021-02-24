@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sub_layer"
+    app:startDestination="@id/subscriptionStartFragment">
+    <fragment
+        android:id="@+id/chooseSubscriptionFragment"
+        android:name="ru.workout24.ui.sub_layer.subscription.ChooseSubscriptionFragment"
+        android:label="fragment_choose_subscription"
+        tools:layout="@layout/fragment_choose_subscription" >
+        <action
+                android:id="@+id/action_chooseSubscriptionFragment_to_sureNotSubscribeFragment"
+                app:destination="@+id/sureNotSubscribeFragment"/>
+        <action
+            android:id="@+id/action_chooseSubscriptionFragment_to_bestSubscriptionDecision"
+            app:destination="@id/bestSubscriptionDecision" />
+    </fragment>
+    <fragment
+        android:id="@+id/subscriptionPagerFragment"
+        android:name="ru.workout24.ui.sub_layer.subscription.SubscriptionPagerFragment"
+        android:label="fragment_subscription_pager"
+        tools:layout="@layout/fragment_subscription_pager" >
+        <action android:id="@+id/action_subscriptionPagerFragment_to_sureNotSubscribeFragment"
+                app:destination="@id/sureNotSubscribeFragment"/>
+        <action android:id="@+id/action_subscriptionPagerFragment_to_bestSubscriptionDecision"
+                app:destination="@id/bestSubscriptionDecision"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sureNotSubscribeFragment"
+        android:name="ru.workout24.ui.sub_layer.subscription.SureNotSubscribeFragment"
+        android:label="fragment_sure_not_subscribe"
+        tools:layout="@layout/fragment_sure_not_subscribe" >
+        <action
+            android:id="@+id/action_sureNotSubscribeFragment_to_chooseSubscriptionFragment"
+            app:destination="@id/chooseSubscriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bestSubscriptionDecision"
+        android:name="ru.workout24.ui.sub_layer.subscription.BestSubscriptionDecision"
+        android:label="BestSubscriptionDecision"
+        tools:layout="@layout/fragment_test_finished" />
+    <fragment
+        android:id="@+id/subscriptionStartFragment"
+        android:name="ru.workout24.ui.sub_layer.subscription.SubscriptionStartFragment"
+        android:label="fragment_apply_notifications"
+        tools:layout="@layout/fragment_apply_notifications" >
+        <action
+            android:id="@+id/action_subscriptionStartFragment_to_chooseSubscriptionFragment"
+            app:destination="@id/chooseSubscriptionFragment" />
+        <action
+            android:id="@+id/action_subscriptionStartFragment_to_subscriptionPagerFragment"
+            app:destination="@id/subscriptionPagerFragment" />
+        <action
+            android:id="@+id/action_subscriptionStartFragment_to_sureNotSubscribeFragment"
+            app:destination="@id/sureNotSubscribeFragment" />
+    </fragment><action android:id="@+id/action_global_bestSubscriptionDecision" app:destination="@id/bestSubscriptionDecision"/>
+</navigation>

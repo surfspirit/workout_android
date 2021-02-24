@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/iv_training_program_image"
+        android:layout_width="0dp"
+        android:layout_height="343dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:adjustViewBounds="true"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:foreground="@drawable/custom_btn_ripple"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ph_training_program" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/prgram_card_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_training_program_image"
+        app:layout_constraintEnd_toEndOf="@+id/iv_training_program_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_training_program_image"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/txt_program_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/orange"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="37dp"
+        android:paddingRight="37dp"
+        android:paddingBottom="5dp"
+        android:text="Доступно"
+        app:layout_constraintStart_toStartOf="@+id/iv_training_program_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_training_program_image" />
+
+    <TextView
+        android:id="@+id/txt_skill_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Уровень сложности"
+        android:textColor="#9b9b9b"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_training_program_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_training_program_image" />
+
+    <TextView
+        android:id="@+id/txt_goal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="Цель тренировок"
+        android:textColor="#9b9b9b"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_skill_level"
+        app:layout_constraintEnd_toEndOf="@+id/iv_training_program_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_training_program_image" />
+
+    <TextView
+        android:id="@+id/txt_program_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Название программы"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txt_goal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_training_program_image" />
+
+    <TextView
+        android:id="@+id/txt_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/white"
+        android:text="2 недели"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_program_name"
+        app:layout_constraintStart_toStartOf="@+id/iv_training_program_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

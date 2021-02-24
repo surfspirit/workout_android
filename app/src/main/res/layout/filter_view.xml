@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <ru.workout24.utills.custom_views.CustomButton
+        android:id="@+id/btn_apply"
+        style="@style/OrangeRoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="18sp"
+        app:enable="false"
+        app:isRounded="true"
+        app:textBtn="Применить фильтр" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        style="@style/BlackRoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="18sp"
+        android:text="Сбросить"
+        android:visibility="invisible" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:background="@color/whiteThree"
+    android:paddingStart="16dp"
+    android:paddingTop="7dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="7dp"
+    android:textColor="@color/separatorGray"
+    android:textSize="14sp"
+    tools:text="9 yanvaria" />

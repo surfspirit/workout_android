@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/topButton"
+            android:layout_width="@dimen/options_dialog_button_width"
+            android:layout_height="@dimen/options_dialog_button_height"
+            android:background="@drawable/options_dialog_top_button_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/option_ripple"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/options_dialog_button_width"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/optionalButton"
+            android:layout_width="@dimen/options_dialog_button_width"
+            android:layout_height="@dimen/options_dialog_button_height"
+            android:background="@color/selectGray"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/option_ripple"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/dividerOptional"
+            android:layout_width="@dimen/options_dialog_button_width"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/bottomButton"
+            android:layout_width="@dimen/options_dialog_button_width"
+            android:layout_height="@dimen/options_dialog_button_height"
+            android:background="@drawable/options_dialog_bottom_button_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/option_ripple"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/options_dialog_triangle_width"
+        android:layout_height="@dimen/options_dialog_triangle_height"
+        android:background="@drawable/options_dialog_triangle"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

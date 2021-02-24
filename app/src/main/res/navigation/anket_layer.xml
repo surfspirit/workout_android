@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/anket_layer"
+    app:startDestination="@id/weightHeightFragment">
+
+    <fragment
+        android:id="@+id/trainingGoalFragment"
+        android:name="ru.workout24.ui.auth_layer.anket_layer.final_part.TrainingGoalFragment"
+        android:label="fragment_training_goal"
+        tools:layout="@layout/fragment_training_goal" />
+    <fragment
+        android:id="@+id/weightHeightFragment"
+        android:name="ru.workout24.ui.auth_layer.anket_layer.final_part.WeightHeightFragment"
+        android:label="fragment_training_level"
+        tools:layout="@layout/fragment_weight_height">
+        <action
+            android:id="@+id/action_weightHeightFragment_to_placeholder"
+            app:destination="@id/placeholder" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeholder"
+        android:name="ru.workout24.ui.auth_layer.anket_layer.final_part.TrainingLevelFragment" tools:layout="@layout/fragment_training_level">
+        <action
+            android:id="@+id/action_placeholder_to_trainingGoalFragment"
+            app:destination="@id/trainingGoalFragment" />
+    </fragment>
+</navigation>

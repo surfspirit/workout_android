@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/option_ripple"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/trainingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@+id/options"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/tomato"
+        tools:text="Тренировка 4" />
+
+    <TextView
+        android:id="@+id/trainingWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trainingTitle"
+        android:layout_alignStart="@id/trainingTitle"
+        android:layout_alignEnd="@+id/trainingTitle"
+        android:textColor="@color/warmGreyTwo"
+        tools:text="Неделя 2" />
+
+    <ImageView
+        android:id="@+id/options"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/option_gray" />
+
+</RelativeLayout>

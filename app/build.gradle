@@ -1,0 +1,195 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+
+def versionMajor = 1
+def versionMinor = 2
+def versionPatch = 6
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '1qwerty23'
+            storeFile file("$rootDir/beffiter_key_store.jks")
+            storePassword '1qwerty23'
+        }
+    }
+
+    compileSdkVersion 29
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    defaultConfig {
+        applicationId "ru.workout24"
+        minSdkVersion 21
+        targetSdkVersion 29
+        
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        project.ext.set("archivesBaseName", "workout-" + defaultConfig.versionName)
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
+    }
+    configurations {
+        all{
+            exclude group: 'commons-logging', module: 'commons-logging'
+            exclude group: 'org.apache.httpcomponents'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'org/apache/http/version.properties'
+        exclude 'org/apache/http/client/version.properties'
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://workoutgeneration.ru/\""
+            buildConfigField "String", "API", "\"/api\""
+            buildConfigField "String", "SAVE_FOLDER_NAME", "\"Befitter\""
+
+            signingConfig signingConfigs.release
+        }
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://workoutgeneration.ru/\""
+            buildConfigField "String", "API", "\"/api\""
+            buildConfigField "String", "SAVE_FOLDER_NAME", "\"Befitter\""
+
+            signingConfig signingConfigs.release
+
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+    sourceSets {
+        // Adds exported schema location as test app assets.
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':collapsiblecalendarview')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.fragment:fragment:1.3.0-alpha05"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.2.0-alpha01'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta1"
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-beta01'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'androidx.customview:customview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    def anko_version = '0.10.8'
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    implementation "org.jetbrains.anko:anko-sdk25:$anko_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
+
+    def lifecycle_version = "2.0.0"
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    def nav_version = "2.1.0-beta02"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    def room_version = "2.1.0-beta01"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    def retrofit_version = '2.+'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+
+    def dagger_version = '2.21'
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+
+    def paging_version = "2.1.1"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    //rxjava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
+
+    //facebook
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+
+    //vk
+    implementation 'com.vk:androidsdk:2.2.1'
+
+    //google
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    //other
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation 'commons-validator:commons-validator:1.6'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+
+    //exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.1'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.1'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.1'
+    implementation "com.vimeo.networking:vimeo-networking:1.1.3"
+    implementation 'com.thoughtbot:expandablecheckrecyclerview:1.4'
+    //loaderview
+    implementation 'com.elyeproj.libraries:loaderviewlibrary:2.0.0'
+
+    implementation 'com.mikhaellopez:circularimageview:4.0.2'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    //cloud messaging
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.1.3'
+
+    //firebase crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta04'
+
+    //google billing
+    implementation 'com.android.billingclient:billing:2.2.0'
+
+    androidTestImplementation "androidx.room:room-testing:$room_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.3.61"
+
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:17.2.1'
+}

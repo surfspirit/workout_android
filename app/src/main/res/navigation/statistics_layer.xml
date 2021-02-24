@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/statistics_layer"
+        app:startDestination="@id/statisticsFragment">
+
+    <fragment
+            android:id="@+id/statisticsFragment"
+            android:name="ru.workout24.ui.statistics_layer.statistics.StatisticsFragment"
+            android:label="StatisticsFragment" >
+        <action
+                android:id="@+id/action_statisticsFragment_to_editStatisticsEntryFragment"
+                app:destination="@id/editStatisticsEntryFragment" />
+        <action
+                android:id="@+id/action_statisticsFragment_to_addStatisticsEntryFragment"
+                app:destination="@id/addStatisticsEntryFragment" />
+        <action
+                android:id="@+id/action_statisticsFragment_to_statisticsDateFragment"
+                app:destination="@id/statisticsDateFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/editStatisticsEntryFragment"
+            android:name="ru.workout24.ui.statistics_layer.edit_statistics_entry.EditStatisticsEntryFragment"
+            android:label="EditStatisticsEntryFragment" >
+        <action
+                android:id="@+id/action_editStatisticsEntryFragment_to_statisticsTrainingsFilterFragment"
+                app:destination="@id/statisticsTrainingsFilterFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addStatisticsEntryFragment"
+            android:name="ru.workout24.ui.statistics_layer.add_statistics_entry.AddStatisticsEntryFragment"
+            android:label="AddStatisticsEntryFragment" >
+        <action
+                android:id="@+id/action_addStatisticsEntryFragment_to_statisticsTrainingsFilterFragment"
+                app:destination="@id/statisticsTrainingsFilterFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/statisticsDateFragment"
+            android:name="ru.workout24.ui.statistics_layer.statistics.StatisticsDateFragment"
+            android:label="StatisticsDateFragment" >
+        <argument
+                android:name="statistic_date"
+                app:argType="string"/>
+        <action
+                android:id="@+id/action_statisticsDateFragment_to_addStatisticsEntryFragment"
+                app:destination="@id/addStatisticsEntryFragment" />
+        <action
+                android:id="@+id/action_statisticsDateFragment_to_editStatisticsEntryFragment"
+                app:destination="@id/editStatisticsEntryFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/statisticsTrainingsFilterFragment"
+            android:name="ru.workout24.ui.statistics_layer.statistics_select_trainings.StatisticsTrainingsFilterFragment"
+            android:label="StatisticsTrainingsFilterFragment" >
+        <action
+                android:id="@+id/action_statisticsTrainingsFilterFragment_to_selectOnceExerciseFragment"
+                app:destination="@id/selectOnceExerciseFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/selectOnceExerciseFragment"
+            android:name="ru.workout24.ui.statistics_layer.once_exercises_trainings.SelectOnceExerciseOrTrainingsFragment"
+            android:label="SelectOnceExerciseFragment" >
+    </fragment><action android:id="@+id/action_global_editStatisticsEntryFragment" app:destination="@id/editStatisticsEntryFragment"/>
+</navigation>

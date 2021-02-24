@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">@color/orange</color>
+
+    <color name="black">#202126</color>
+    <color name="white">#ffffff</color>
+    <color name="darkslategray">#2F3138</color>
+    <color name="transparentWhite40">#66FFFFFF</color>
+    <color name="orange">#ea463c</color>
+    <color name="darkOrange">#bf3937</color>
+    <color name="transparentBlack">#80202126</color>
+    <color name="transparentWhite">#80ffffff</color>
+    <color name="red">#bf3937</color>
+    <color name="red_light">#FF5247</color>
+    <color name="lightGray">#d8d8d8</color>
+    <color name="darkGray">#979797</color>
+    <color name="coral">#dd514a</color>
+    <color name="tomato">#ea463b</color>
+    <color name="pinkishGrey">#c8c8c8</color>
+    <color name="separatorGray">#4a4a4a</color>
+    <color name="charcoalGrey">#2F3138</color>
+    <color name="warmGray">#838383</color>
+    <color name="selectGray">#4b4e59</color>
+    <color name="silver">#ceced2</color>
+    <color name="whiteTwo">#d7d7d7</color>
+    <color name="warmGreyTwo">#9b9b9b</color>
+    <color name="gunmetal">#4b4e59</color>
+    <color name="whiteThree">#e9e9e9</color>
+    <color name="whiteFive">#e6e6e6</color>
+</resources>

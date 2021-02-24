@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_graph"
+    app:startDestination="@id/enterFragment">
+
+    <fragment
+        android:id="@+id/genderChoiceFragment"
+        android:name="ru.workout24.ui.auth_layer.gender_choice.GenderChoiceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_gender_choice">
+        <action
+            android:id="@+id/action_genderChoiceFragment_to_sub_layer"
+            app:destination="@id/sub_layer"
+            app:popUpTo="@+id/genderChoiceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/applyNotifFragment"
+        android:name="ru.workout24.ui.auth_layer.apply_notifications.ApplyNotificationsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_apply_notifications">
+        <action
+            android:id="@+id/action_applyNotifFragment_to_genderChoiceFragment"
+            app:destination="@id/genderChoiceFragment"
+            app:popUpTo="@+id/applyNotifFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="ru.workout24.ui.enter.EnterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_enter">
+        <action
+            android:id="@+id/action_enterFragment_to_auth_layer"
+            app:destination="@id/auth_layer"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterFragment_to_applyNotifFragment"
+            app:destination="@id/applyNotifFragment"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterFragment_to_genderChoiceFragment"
+            app:destination="@id/genderChoiceFragment"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterFragment_to_sub_layer"
+            app:destination="@id/sub_layer"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterFragment_to_anket_layer"
+            app:destination="@id/anket_layer"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterFragment_to_test_layer"
+            app:destination="@id/test_layer"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterFragment_to_menu_layer"
+            app:destination="@id/menu_layer"
+            app:popUpTo="@+id/enterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/auth_layer"
+        app:startDestination="@id/auth_layer">
+        <include app:graph="@navigation/auth_layer" />
+        <action
+            android:id="@+id/action_global_applyNotifFragment2"
+            app:destination="@+id/applyNotifFragment"
+            app:popUpTo="@+id/auth_layer"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_genderChoiceFragment"
+            app:destination="@id/genderChoiceFragment"
+            app:popUpTo="@+id/auth_layer"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_sub_layer2"
+            app:destination="@id/sub_layer"
+            app:popUpTo="@+id/auth_layer"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_anket_layer2"
+            app:destination="@id/anket_layer"
+            app:popUpTo="@+id/auth_layer"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_test_layer2"
+            app:destination="@id/test_layer"
+            app:popUpTo="@+id/auth_layer"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_menu_layer2"
+            app:destination="@id/menu_layer"
+            app:popUpTo="@+id/auth_layer"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <navigation
+        android:id="@+id/sub_layer"
+        app:startDestination="@id/sub_layer">
+        <include app:graph="@navigation/sub_layer" />
+        <action
+            android:id="@+id/action_global_anket_layer"
+            app:destination="@id/anket_layer"
+            app:popUpTo="@+id/sub_layer"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <navigation
+        android:id="@+id/anket_layer"
+        app:startDestination="@id/anket_layer">
+        <include app:graph="@navigation/anket_layer" />
+        <action
+            android:id="@+id/action_global_test_layer"
+            app:destination="@id/test_layer"
+            app:popUpTo="@+id/anket_layer"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <navigation
+        android:id="@+id/test_layer"
+        app:startDestination="@id/test_layer">
+        <include app:graph="@navigation/test_layer" />
+        <action
+            android:id="@+id/action_global_menu_layer"
+            app:destination="@id/menu_layer"
+            app:popUpTo="@+id/test_layer"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <navigation
+        android:id="@+id/menu_layer"
+        app:startDestination="@id/menu_layer">
+        <include app:graph="@navigation/menu_layer" />
+        <action
+            android:id="@+id/action_global_globalChooseSubscriptionFragment"
+            app:destination="@id/globalChooseSubscriptionFragment" />
+        <action
+            android:id="@+id/action_global_enterFragment"
+            app:destination="@id/enterFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/root_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_statistics_layer"
+            app:destination="@id/statistics_layer"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="from_lk"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </navigation>
+    <navigation
+        android:id="@+id/lk_layer"
+        app:startDestination="@id/lk_layer">
+        <include app:graph="@navigation/lk_layer" />
+        <action
+            android:id="@+id/action_global_enterFragment"
+            app:destination="@id/enterFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/root_graph"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <navigation
+        android:id="@+id/statistics_layer"
+        app:startDestination="@id/statistics_layer">
+        <include app:graph="@navigation/statistics_layer" />
+        <action
+            android:id="@+id/action_global_lk_layer"
+            app:destination="@id/lk_layer"
+            app:popUpTo="@+id/personalCabinetFragment"
+            app:popUpToInclusive="true" />
+    </navigation>
+    <navigation
+        android:id="@+id/helpful_info_layer"
+        app:startDestination="@id/helpful_info_layer">
+        <include app:graph="@navigation/helpful_info_layer" />
+    </navigation>
+    <fragment
+        android:id="@+id/globalChooseSubscriptionFragment"
+        android:name="ru.workout24.ui.sub_layer.subscription.GlobalChooseSubscriptionFragment"
+        android:label="fragment_global_choose_subscription"
+        tools:layout="@layout/fragment_global_choose_subscription" />
+    <fragment android:id="@+id/globalChooseSubscriptionFragmentLk"
+        android:name="ru.workout24.ui.sub_layer.subscription.GlobalChooseSubscriptionFragment"
+        android:label="fragment_global_choose_subscription"
+        tools:layout="@layout/fragment_global_choose_subscription">
+        <argument
+            android:name="show_back_button"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_layer"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ru.workout24.ui.trainings.TrainingsFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_trainings" />
+    <fragment
+        android:id="@+id/trainingCategoriesFragment"
+        android:name="ru.workout24.ui.trainings.pager.TrainingCategoriesFragment"
+        android:label="fragment_training_categories"
+        tools:layout="@layout/fragment_training_categories">
+        <action
+            android:id="@+id/action_trainingCategoriesFragment_to_trainingProgramsFragment"
+            app:destination="@id/trainingProgramsFragment" />
+        <action
+            android:id="@+id/action_trainingCategoriesFragment_to_onceTrainingListFragment"
+            app:destination="@id/onceTrainingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingProgramsFragment"
+        android:name="ru.workout24.ui.trainings.training_programs.TrainingProgramsFragment"
+        android:label="fragment_training_programs"
+        tools:layout="@layout/fragment_training_programs">
+        <action
+            android:id="@+id/action_trainingProgramsFragment_to_trainingProgramFragment"
+            app:destination="@id/trainingProgramFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onceExercisesFilterFragment"
+        android:name="ru.workout24.ui.trainings.pager.OnceExercisesFilterFragment"
+        android:label="fragment_once_exercises_filters"
+        tools:layout="@layout/fragment_once_exercises_filters">
+        <action
+            android:id="@+id/action_onceExercisesFilterFragment_to_onceExercisesFragment"
+            app:destination="@id/onceExercisesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onceExercisesFragment"
+        android:name="ru.workout24.ui.trainings.once_exercise.OnceExercisesFragment"
+        android:label="fragment_once_exercises"
+        tools:layout="@layout/fragment_once_exercises" />
+    <fragment
+        android:id="@+id/onceTrainingListFragment"
+        android:name="ru.workout24.ui.trainings.once_trainings.OnceTrainingListFragment"
+        android:label="fragment_once_training_list"
+        tools:layout="@layout/fragment_once_training_list">
+        <action
+            android:id="@+id/action_onceTrainingListFragment_to_aboutTrainingFragment"
+            app:destination="@id/aboutTrainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingProgramFragment"
+        android:name="ru.workout24.ui.trainings.training_programs.program.TrainingProgramFragment"
+        android:label="fragment_training_program"
+        tools:layout="@layout/fragment_training_program">
+        <action
+            android:id="@+id/action_trainingProgramFragment_to_aboutTrainingFragment"
+            app:destination="@id/aboutTrainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutTrainingFragment"
+        android:name="ru.workout24.ui.trainings.training_programs.training.AboutTrainingFragment"
+        android:label="fragment_about_training"
+        tools:layout="@layout/fragment_about_training">
+        <action
+            android:id="@+id/action_aboutTrainingFragment_to_exerciseDescriptionFragment"
+            app:destination="@id/exerciseDescriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseDescriptionFragment"
+        android:name="ru.workout24.ui.trainings.exercise_description.ExerciseDescriptionFragment"
+        android:label="fragment_exercise_description"
+        tools:layout="@layout/fragment_exercise_description" />
+    <action
+        android:id="@+id/action_global_onceExercisesFragment"
+        app:destination="@id/onceExercisesFragment" />
+    <fragment
+        android:id="@+id/editStatisticsEntryFragment"
+        android:name="ru.workout24.ui.statistics_layer.edit_statistics_entry.EditStatisticsEntryFragment"
+        android:label="EditStatisticsEntryFragment">
+        <action
+            android:id="@+id/action_editStatisticsEntryFragment_to_statisticsTrainingsFilterFragment"
+            app:destination="@id/statisticsTrainingsFilterFragment" />
+        <action
+            android:id="@+id/action_editStatisticsEntryFragment_to_aboutTrainingFragment"
+            app:destination="@id/aboutTrainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsTrainingsFilterFragment"
+        android:name="ru.workout24.ui.statistics_layer.statistics_select_trainings.StatisticsTrainingsFilterFragment"
+        android:label="StatisticsTrainingsFilterFragment">
+        <action
+            android:id="@+id/action_statisticsTrainingsFilterFragment_to_selectOnceExerciseFragment"
+            app:destination="@id/selectOnceExerciseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectOnceExerciseFragment"
+        android:name="ru.workout24.ui.statistics_layer.once_exercises_trainings.SelectOnceExerciseOrTrainingsFragment"
+        android:label="SelectOnceExerciseFragment" />
+    <!--    <fragment-->
+    <!--        android:id="@+id/exercisesExecutionHostFragment"-->
+    <!--        android:name="ru.workoutgeneration.ui.exercises_execution.ExercisesExecutionHostFragment"-->
+    <!--        android:label="ExercisesExecutionHostFragment" /><action android:id="@+id/action_global_exercisesExecutionHostFragment" app:destination="@id/exercisesExecutionHostFragment"/>-->
+    <fragment
+        android:id="@+id/exercisesExecutionHostFragment"
+        android:name="ru.workout24.ui.exercises_execution.ExercisesExecutionHostFragment"
+        android:label="ExercisesExecutionHostFragment" />
+    <action
+        android:id="@+id/action_global_exercisesExecutionHostFragment"
+        app:destination="@id/exercisesExecutionHostFragment" />
+
+    <navigation
+        android:id="@+id/test_layer"
+        app:startDestination="@id/test_layer">
+        <include app:graph="@navigation/test_layer" />
+    </navigation>
+    <action
+        android:id="@+id/action_global_test_layer3"
+        app:destination="@id/test_layer" />
+
+</navigation>

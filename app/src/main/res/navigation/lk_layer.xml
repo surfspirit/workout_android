@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lk_layer"
+    app:startDestination="@id/personalCabinetFragment">
+
+    <fragment
+        android:id="@+id/personalCabinetFragment"
+        android:name="ru.workout24.ui.lk_layer.personal_cab.PersonalCabinetFragment"
+        android:label="fragment_personal_cabinet"
+        tools:layout="@layout/fragment_personal_cabinet">
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_wg_bonuses_fragment"
+            app:destination="@id/wg_bonuses_fragment" />
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_workout_diary"
+            app:destination="@id/workout_diary" />
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_globalChooseSubscriptionFragmentLk"
+            app:destination="@+id/globalChooseSubscriptionFragmentLk" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="ru.workout24.ui.lk_layer.edit_profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="ru.workout24.ui.lk_layer.change_password.ChangePasswordFragment"
+        android:label="ChangePasswordFragment">
+        <action
+            android:id="@+id/action_changePasswordFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wg_bonuses_fragment"
+        android:name="ru.workout24.ui.wg_bonuses.WgBonusesFragment"
+        tools:layout="@layout/fragment_wg_bonuses">
+        <action
+            android:id="@+id/action_wg_bonuses_fragment_to_wg_bonuses_detail_fragment"
+            app:destination="@id/wg_bonuses_detail_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wg_bonuses_detail_fragment"
+        android:name="ru.workout24.ui.wg_bonuses_detail.WgBonusesDetailFragment"
+        tools:layout="@layout/fragment_wg_bonuses_detail">
+        <action
+            android:id="@+id/action_wg_bonuses_detail_fragment_to_infoNewOpportunities"
+            app:destination="@id/infoNewOpportunities" />
+    </fragment>
+    <fragment
+        android:id="@+id/workout_diary"
+        android:name="ru.workout24.ui.workout_diary.WorkoutDiaryFragment"
+        tools:layout="@layout/fragment_workout_diary">
+        <action
+            android:id="@+id/action_workout_diary_to_diaryDoneExerciseFragment"
+            app:destination="@id/diaryDoneExerciseFragment" />
+        <action
+            android:id="@+id/action_workout_diary_to_diaryDoneTrainingFragment"
+            app:destination="@id/diaryDoneTrainingFragment" />
+        <action
+            android:id="@+id/action_workout_diary_to_trainingProgram"
+            app:destination="@id/trainingProgram" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoNewOpportunities"
+        android:name="ru.workout24.ui.wg_bonuses_detail.info_new_opportunities.InfoNewOpportunitiesFragment"
+        android:label="fragment_info_new_opportunities"
+        tools:layout="@layout/fragment_info_new_opportunities" />
+    <fragment
+        android:id="@+id/diaryDoneExerciseFragment"
+        android:name="ru.workout24.ui.workout_diary_planing_done.diary_planing_done_exercise.DiaryPlaningDoneExerciseFragment"
+        android:label="fragment_diary_done_exercise"
+        tools:layout="@layout/fragment_diary_done_exercise" />
+    <fragment
+        android:id="@+id/diaryDoneTrainingFragment"
+        android:name="ru.workout24.ui.workout_diary_planing_done.diary_planing_done_training.DiaryPlaningDoneTrainingFragment"
+        android:label="fragment_diary_done_training"
+        tools:layout="@layout/fragment_diary_done_training" />
+    <fragment
+        android:id="@+id/trainingProgram"
+        android:name="ru.workout24.ui.trainings.training_programs.program.TrainingProgramFragment"
+        android:label="fragment_training_program"
+        tools:layout="@layout/fragment_training_program">
+        <action
+            android:id="@+id/action_trainingProgramFragment_to_aboutTrainingFragment"
+            app:destination="@id/aboutTrainingFragment" />
+        <argument
+            android:name="onlyShow"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/globalChooseSubscriptionFragmentLk"
+        android:name="ru.workout24.ui.sub_layer.subscription.GlobalChooseSubscriptionFragment"
+        android:label="fragment_global_choose_subscription"
+        tools:layout="@layout/fragment_global_choose_subscription">
+        <argument
+            android:name="show_back_button"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editStatisticsEntryFragment"
+        android:name="ru.workout24.ui.statistics_layer.edit_statistics_entry.EditStatisticsEntryFragment"
+        android:label="EditStatisticsEntryFragment">
+        <action
+            android:id="@+id/action_editStatisticsEntryFragment_to_statisticsTrainingsFilterFragment"
+            app:destination="@id/statisticsTrainingsFilterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsTrainingsFilterFragment"
+        android:name="ru.workout24.ui.statistics_layer.statistics_select_trainings.StatisticsTrainingsFilterFragment"
+        android:label="StatisticsTrainingsFilterFragment">
+        <action
+            android:id="@+id/action_statisticsTrainingsFilterFragment_to_selectOnceExerciseFragment"
+            app:destination="@id/selectOnceExerciseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectOnceExerciseFragment"
+        android:name="ru.workout24.ui.statistics_layer.once_exercises_trainings.SelectOnceExerciseOrTrainingsFragment"
+        android:label="SelectOnceExerciseFragment"></fragment>
+    <fragment
+        android:id="@+id/aboutTrainingFragment"
+        android:name="ru.workout24.ui.trainings.training_programs.training.AboutTrainingFragment"
+        android:label="fragment_about_training"
+        tools:layout="@layout/fragment_about_training">
+        <action
+            android:id="@+id/action_aboutTrainingFragment_to_exerciseDescriptionFragment"
+            app:destination="@id/exerciseDescriptionFragment" />
+        <argument
+            android:name="onlyShow"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseDescriptionFragment"
+        android:name="ru.workout24.ui.trainings.exercise_description.ExerciseDescriptionFragment"
+        android:label="fragment_exercise_description"
+        tools:layout="@layout/fragment_exercise_description">
+        <argument
+            android:name="onlyShow"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/exercisesExecutionHostFragment"
+        android:name="ru.workout24.ui.exercises_execution.ExercisesExecutionHostFragment"
+        android:label="ExercisesExecutionHostFragment" />
+    <action
+        android:id="@+id/action_global_exercisesExecutionHostFragment"
+        app:destination="@id/exercisesExecutionHostFragment" />
+    <action
+        android:id="@+id/action_global_test_layer3"
+        app:destination="@id/test_layer" />
+</navigation>

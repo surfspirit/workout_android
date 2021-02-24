@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_save"
+        app:layout_constraintStart_toStartOf="@+id/iv_save"
+        app:layout_constraintTop_toTopOf="@+id/iv_save" />
+
+    <ImageView
+        android:id="@+id/iv_save"
+        android:layout_width="110dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="#e6e6e6"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/empty_photo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Добавьте\nфотографию\nпрогресса"
+        android:textColor="#b4b4b4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_save"
+        app:layout_constraintEnd_toEndOf="@+id/iv_save"
+        app:layout_constraintStart_toStartOf="@+id/iv_save"
+        app:layout_constraintTop_toTopOf="@+id/iv_save" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_photo"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="125dp"
+        android:clickable="true"
+        android:foreground="@drawable/custom_round_ripple"
+        android:src="@drawable/ic_add_photo"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/iv_save"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_save"
+        app:layout_constraintTop_toTopOf="@+id/iv_save"
+        app:maxImageSize="70dp" />
+
+    <ImageView
+        android:id="@+id/iv_remove"
+        style="@style/OrangeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/baseline_close_white_24"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/iv_save"
+        app:layout_constraintTop_toTopOf="@+id/iv_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_layer"
+        android:title="Главная" />
+    <item
+        android:id="@+id/lk_layer"
+        android:title="Личный кабинет" />
+<!--    <item android:title="Тренировки" />-->
+    <item
+        android:id="@+id/helpful_info_layer"
+        android:title="Полезная информация" />
+<!--    <item android:title="Блог" />-->
+    <item
+        android:id="@+id/globalChooseSubscriptionFragmentLk"
+        android:title="Подписка" />
+    <item
+        android:id="@+id/action_global_test_layer3"
+        android:title="Фитнес-тест" />
+</menu>

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Workout Generation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_register_description">Создавая учетную запись, я соглашаюсь с
+        <a href="https://stackoverflow.com/questions/38812995/android-textview-hyperlink/38813675">
+            Условиями пользования
+        </a>
+        и
+        <a href="https://stackoverflow.com/questions/38812995/android-textview-hyperlink/38813675">
+            Политика конфиденциальности
+        </a>
+        Workout Generation
+    </string>
+    <string name="text_apply_notif_description">
+        Получайте только самую важную информацию о грядущих тренировках и личном
+        расписании, а также обновлениях приложения и новых полезных функциях
+    </string>
+    <string name="text_apply_notif_title">
+        WG уведомления
+    </string>
+
+    <integer-array name="img_id_arr">
+        <item>@drawable/tab_indicator_default</item>
+        <item>@drawable/tab_indicator_default</item>
+        <item>@drawable/tab_indicator_default</item>
+        <item>@drawable/tab_indicator_default</item>
+    </integer-array>
+    <string name="facebook_app_id">1546608048809531</string>
+    <string name="fb_login_protocol_scheme">fb1546608048809531</string>
+    <string name="client_id">351833209270-iqvjpva2u5aefl02oclnvp522dqiefqr.apps.googleusercontent.com</string>
+    <string name="client_secret">jwRbBNMs9WIKJtkjCUSNKei7</string>
+
+    <integer name="com_vk_sdk_AppId">6992084</integer>
+    <string name="auth_vk_error">Произошла ошибка авторизации во Вконтакте. Код ошибки:%1$s</string>
+    <string name="auth_fb_error">Произошла ошибка авторизации в Facebook. Код ошибки:%1$s</string>
+    <string name="auth_google_error">Произошла ошибка авторизации в Google. Код ошибки:%1$s</string>
+
+    <string name="sub_toolbar_header">
+        <![CDATA[ <font color=#ff5247>ОТКРОЙТЕ </font><font color=#ffffff>ДЛЯ СЕБЯ НОВЫЕ ВОЗМОЖНОСТИ</font> ]]>
+    </string>
+    <string name="info_new_opp_text">
+        <![CDATA[ <font color=#ff5247>НАБЕРИТЕ</font><font color=#ffffff> WG БОНУСЫ</font> ]]>
+    </string>
+    <string name="save">Сохранить</string>
+    <string name="leaders_list">Список лидеров</string>
+    <string name="wg_bonuses">WG бонусы</string>
+
+    <string name="see_program">Смотреть программу</string>
+    <string name="end_program">Завершить программу</string>
+    <string name="delete_from_list">Удалить из списка</string>
+    <string name="see_result">Смотреть результат</string>
+    <string name="on_next_week">Перенести на следующую неделю</string>
+    <string name="repeat_on_next_week">Повторить на следующей неделе</string>
+
+    <string name="about_food">О питании</string>
+    <string name="about_sport">О спорте</string>
+    <string name="default_notification_channel_id">befitter_channel_01</string>
+    <string name="cancel">Отмена</string>
+    <string name="see_training">Смотреть тренировку</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:opacity="opaque">
+
+    <!-- Цвет фона, предпочтительно как в главной теме -->
+    <!-- android:drawable="@drawable/background" -->
+    <item
+            android:drawable="@color/colorPrimary"
+            android:gravity="fill_horizontal|fill_vertical"
+    />
+
+    <!-- Лого приложения - 144dp версия иконки приложения -->
+    <item
+            android:width="181dp"
+            android:height="179dp"
+            android:gravity="center">
+
+        <bitmap
+                android:src="@drawable/logo"
+                android:gravity="fill_horizontal|fill_vertical"/>
+
+    </item>
+
+
+
+</layer-list>

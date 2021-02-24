@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "351833209270",
+    "firebase_url": "https://workoutmd.firebaseio.com",
+    "project_id": "workoutmd",
+    "storage_bucket": "workoutmd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351833209270:android:b6b0813e2b7976dbd0a917",
+        "android_client_info": {
+          "package_name": "ru.workout24"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351833209270-89sgavmhb08saltl4eu8877ij887ln1j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.workout24",
+            "certificate_hash": "d7bbc8773e553279cc6a3a423de29ecc3efabeca"
+          }
+        },
+        {
+          "client_id": "351833209270-632c58gl3m5fj3b60nham76pk4n8ddf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAjJ77jG8zeiEZ-DIlES2wQJDw7mld2hU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351833209270-iqvjpva2u5aefl02oclnvp522dqiefqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "351833209270-tncmijbp039eoav1j00tgggu9a948cet.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.satek.BeFitter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351833209270:android:32c8c9195eeccecdd0a917",
+        "android_client_info": {
+          "package_name": "ru.workoutgeneration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351833209270-1ubf08f9egapairp5rgle9mhpoh0rnhl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.workoutgeneration",
+            "certificate_hash": "a4a53f32900691c986c41312938a3100efae5ba3"
+          }
+        },
+        {
+          "client_id": "351833209270-kbpsavtg1fvn9os9d1i3odulelss04um.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.workoutgeneration",
+            "certificate_hash": "d7bbc8773e553279cc6a3a423de29ecc3efabeca"
+          }
+        },
+        {
+          "client_id": "351833209270-49dggoj8htodpbrfg3nr0tbqhdq6qi12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.workoutgeneration",
+            "certificate_hash": "90d8e69dbc5f044920c8c2f0d3257eac385b2d7e"
+          }
+        },
+        {
+          "client_id": "351833209270-632c58gl3m5fj3b60nham76pk4n8ddf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAjJ77jG8zeiEZ-DIlES2wQJDw7mld2hU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351833209270-iqvjpva2u5aefl02oclnvp522dqiefqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "351833209270-tncmijbp039eoav1j00tgggu9a948cet.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.satek.BeFitter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

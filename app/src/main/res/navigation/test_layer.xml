@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test_layer"
+    app:startDestination="@id/startTestFragment">
+
+    <fragment
+        android:id="@+id/exercisesFragment"
+        android:name="ru.workout24.ui.auth_layer.test_layer.ExercisesFragment"
+        android:label="fragment_exercises"
+        tools:layout="@layout/fragment_exercises" />
+    <fragment
+        android:id="@+id/testListFragment"
+        android:name="ru.workout24.ui.auth_layer.test_layer.TestListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_test_list">
+        <action
+            android:id="@+id/action_testListFragment_to_exercisesFragment"
+            app:destination="@id/exercisesFragment" />
+        <action
+            android:id="@+id/action_testListFragment_to_exercisesExecutionHostFragment"
+            app:destination="@id/exercisesExecutionHostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFinishedFragment"
+        android:name="ru.workout24.ui.auth_layer.test_layer.TestFinishedFragment"
+        android:label="TestFinishedFragment">
+        <argument
+            android:name="navigateTo"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startTestFragment"
+        android:name="ru.workout24.ui.auth_layer.test_layer.StartTestFragment"
+        android:label="fragment_start_test"
+        tools:layout="@layout/fragment_start_test">
+        <action
+            android:id="@+id/action_startTestFragment_to_testListFragment"
+            app:destination="@id/testListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exercisesExecutionHostFragment"
+        android:name="ru.workout24.ui.exercises_execution.ExercisesExecutionHostFragment">
+        <action
+            android:id="@+id/action_exercisesExecutionHostFragment_to_testFinishedFragment"
+            app:destination="@id/testFinishedFragment" />
+    </fragment>
+</navigation>

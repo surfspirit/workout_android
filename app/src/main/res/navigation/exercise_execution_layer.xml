@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exercise_execution_layer"
+    app:startDestination="@id/beginCountDownFragment">
+
+    <fragment
+        android:id="@+id/beginCountDownFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.BeginCountDownFragment"
+        android:label="BeginCountDownFragment">
+        <action
+            android:id="@+id/action_beginCountDownFragment_to_exerciseTimerHostFragment"
+            app:destination="@id/exerciseTimerHostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseTimerHostFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.exercise_timer_fragment.ExerciseTimerHostFragment"
+        android:label="ExerciseTimerHostFragment" >
+        <action
+            android:id="@+id/action_exerciseTimerHostFragment_to_likePickerFragment"
+            app:destination="@id/likePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likePickerFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.LikePickerFragment"
+        android:label="LikePickerFragment" >
+        <action
+            android:id="@+id/action_likePickerFragment_to_hardnessPickerFragment"
+            app:destination="@id/hardnessPickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hardnessPickerFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.HardnessPickerFragment"
+        android:label="HardnessPickerFragment" >
+        <action
+            android:id="@+id/action_hardnessPickerFragment_to_saveResultsFragment2"
+            app:destination="@id/saveResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveResultsFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.SaveResultsFragment"
+        android:label="SaveResultsFragment" /><action android:id="@+id/action_global_saveResultsFragment" app:destination="@id/saveResultsFragment"/>
+
+</navigation>

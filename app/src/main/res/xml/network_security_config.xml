@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">befitter.nppsatek.com</domain>
+        <domain includeSubdomains="true">dev.befitter.nppsatek.com </domain>
+        <domain includeSubdomains="true">dev.workoutgeneration.ru</domain>
+        <domain includeSubdomains="true">workoutgeneration.ru</domain>
+        <domain includeSubdomains="true">406900.selcdn.ru</domain>
+    </domain-config>
+</network-security-config>

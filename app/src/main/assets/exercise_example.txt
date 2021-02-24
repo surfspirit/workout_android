@@ -1,0 +1,35 @@
+{
+              "id": "674060e9-afd7-49a6-9d26-1aa86ef3a797",
+              "exercise_id": "e1b9a21a-f1c4-470b-bbae-73b9793c074e",
+              "available": true,
+              "description": "Описание Отжимания",
+              "inventories": [
+                {
+                  "id": "b48caa96-7d5e-48ce-9971-05e8910189d9",
+                  "name": "Никакого",
+                  "description": ""
+                }
+              ],
+              "muscle_groups": [
+                {
+                  "id": "627c8467-9c98-46e6-944d-3e3d950bb445",
+                  "name": "Трицепс",
+                  "preview_url": "https://i.imgur.com/zqM7HFI.png"
+                },
+                {
+                                  "id": "627c8467-9c98-46e6-944d-3e3d950bb445",
+                                  "name": "Трицепс",
+                                  "preview_url": "https://i.imgur.com/zqM7HFI.png"
+                                }
+              ],
+              "video_url": "http://player.vimeo.com/video/54802209",
+              "preview_url": "https://290704.selcdn.ru/befitter-public/exercises/image_16.jpg",
+              "author_id": null,
+              "name": "Отжимания",
+              "estimate_time": 900,
+              "pause_time": 10,
+              "required_range": {
+                "min": 0,
+                "max": 0
+              }
+              }

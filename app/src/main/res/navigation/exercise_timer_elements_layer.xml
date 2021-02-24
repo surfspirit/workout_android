@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exercise_timer_elements_layer"
+    app:startDestination="@id/descriptionFragment">
+
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.exercise_timer_fragment.fragments.DescriptionFragment"
+        android:label="DescriptionFragment" />
+    <fragment
+        android:id="@+id/resultPickerFragment"
+        android:name="ru.workout24.ui.exercises_execution.fragments.exercise_timer_fragment.fragments.ResultPickerFragment"
+        android:label="ResultPickerFragment" />
+</navigation>
